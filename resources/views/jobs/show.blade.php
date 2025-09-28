@@ -43,11 +43,18 @@
             </p>
         </div>
 
-        <div class="text-center mt-12">
+        <!-- Action Buttons -->
+        <div class="flex justify-center mt-12 space-x-6">
             <a href="/jobs"
                 class="inline-flex items-center justify-center px-8 py-4 bg-blue-600 text-white font-semibold rounded-full
                 shadow-lg hover:bg-blue-700 transition transform hover:-translate-y-1">
                 <span class="mr-2">←</span> Back to all Jobs
+            </a>
+
+            <a href="/jobs/{{ $job->id }}/edit"
+                class="inline-flex items-center justify-center px-8 py-4 bg-indigo-600 text-white font-semibold rounded-full
+                shadow-lg hover:bg-indigo-700 transition transform hover:-translate-y-1">
+                ✏️ Edit Job
             </a>
         </div>
     </div>

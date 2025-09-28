@@ -16,6 +16,13 @@
             <div class="flex items-center space-x-4">
                 <x-nav-link href="/" :active="request()->is('/')">Home</x-nav-link>
                 <x-nav-link href="/jobs" :active="request()->is('jobs')">Jobs</x-nav-link>
+
+                <!-- Create Job Button -->
+                <a href="/jobs/create"
+                    class="ml-4 inline-block rounded-md bg-indigo-600 px-4 py-2 text-sm font-semibold text-white shadow-sm 
+                    hover:bg-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-600 focus:ring-offset-2">
+                    Create Job
+                </a>
             </div>
         </nav>
     </header>
