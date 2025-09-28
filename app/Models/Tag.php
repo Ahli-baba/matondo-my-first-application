@@ -11,6 +11,11 @@ class Tag extends Model
 
     public function jobs()
     {
-        return $this->belongsToMany(\App\Models\Job::class, relatedPivotKey: "job_listing_id");
+        return $this->belongsToMany(
+            \App\Models\Job::class,
+            'job_listing_tag',   // ✅ pivot table name
+            'tag_id',            // ✅ foreign key in pivot referencing tags
+            'job_listing_id'     // ✅ foreign key in pivot referencing jobs
+        );
     }
 }

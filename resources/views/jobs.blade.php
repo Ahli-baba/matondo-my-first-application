@@ -8,8 +8,9 @@
             <div class="p-8">
                 <h2 class="text-6xl font-extrabold mb-4 tracking-tight">Opportunities</h2>
                 <p class="text-xl leading-relaxed max-w-2xl mx-auto mb-6">
-                    Discover meaningful roles where your passion meets purpose. Join <span
-                        class="font-semibold text-purple-400">InnovateX</span> and shape the future of technology.
+                    Discover meaningful roles where your passion meets purpose. Join
+                    <span class="font-semibold text-purple-400">InnovateX</span>
+                    and shape the future of technology.
                 </p>
                 <p class="text-gray-400 max-w-3xl mx-auto">
                     Whether you’re building groundbreaking software, developing AI solutions, or leading a team of
@@ -26,7 +27,8 @@
                         <h3 class="text-2xl font-bold text-gray-800">{{ $job->title }}</h3>
                         <span class="font-semibold text-emerald-600 text-lg">{{ $job->salary }}</span>
                     </div>
-                    <div class="text-sm text-gray-500 font-medium">{{ $job->employer->name ?? 'InnovateX' }}
+                    <div class="text-sm text-gray-500 font-medium">
+                        {{ $job->employer->name ?? 'InnovateX' }}
                     </div>
                 </a>
             @empty
@@ -34,6 +36,11 @@
                     <p class="text-gray-500 text-lg">No job openings at this time. Please check back later!</p>
                 </div>
             @endforelse
+        </div>
+
+        {{-- Pagination links --}}
+        <div class="mt-6">
+            {{ $jobs->links() }}
         </div>
     </div>
 </x-layout>
